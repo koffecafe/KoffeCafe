@@ -84,8 +84,8 @@
 
     <section class="footer">
         <a href="webpage_about.html"><h2>Koffe Cafe</h2></a>
-        <p>At JCD Gaming, we're fueled by hard work and dedication. 
-            Join us as we build a community of passionate gamers, united by our love for gaming. <br>Let's embark on this epic journey together!</p>
+        <p>At KoffeCafe, we’re passionate about delicious, delightful beverages, and more.
+             Join us as we build a community of beverage enthusiasts who share a love for refreshing and flavorful drinks!</p>
         <div class="icons">
             <a href="#"><i class="fab fa-facebook"></i></a>|
             <a href="#"><i class="fas fa-envelope"></i></a>|
@@ -94,30 +94,6 @@
         </div>
     </section>
 
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlides(index) {
-            if (index >= slides.length) {
-                slideIndex = 0;
-            } else if (index < 0) {
-                slideIndex = slides.length - 1;
-            } else {
-                slideIndex = index;
-            }
-
-            // Move the slider to the appropriate slide
-            const slider = document.querySelector('.slider');
-            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-
-        function plusSlides(n) {
-            showSlides(slideIndex + n);
-        }
-
-        // Initially show the first slide
-        showSlides(slideIndex);
-    </script>
-</body>
+    <script src="script.js"></script>
+</body> 
 </html>
