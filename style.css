@@ -53,7 +53,7 @@ nav {
     gap: 20px; /* Space between the menu items */
 }
 
-.menu-left ul li {
+.menu-left ul li{
     display: inline;
 }
 
@@ -62,6 +62,11 @@ nav {
     color: #000000; /* Set text color to black for contrast against the background */
     padding: 10px;
     font-size: 16px;
+}
+.menuBtn a .fa-solid{
+    display: none;
+    color: black;
+    font-size: 24px;
 }
 
 /* Search bar in the center */
@@ -257,5 +262,17 @@ nav {
 
     .box {
         width: 100%; /* Make each box take the full width */
+    }
+}
+@media (max-width: 500px) {
+    .menu-left ul li{
+        display: none;
+    }
+    .menuBtn a .fa-solid{
+        display: block;
+        color: black;
+        text-decoration: none;
+        list-style: none;
+        font-size: 24px;
     }
 }
