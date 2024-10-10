@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure the body and html take up full height */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    overflow: auto; /* Allow scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background container */
+.background {
+    position: fixed; /* Fix the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/cafe.png');
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+/* Header styling */
+header {
+   background-color: rgba(56, 119, 1, 0.9);
+    padding: 15px;
+    position: relative; /* Position relative to allow stacking of content */
+    z-index: 1; /* Ensure it appears above the background */
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; /* Adjust the height of the header */
+}
+
+/* Left menu with navigation links */
+.menu-left ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between the menu items */
+}
+
+.menu-left ul li {
+    display: inline;
+}
+
+.menu-left ul li a {
+    text-decoration: none;
+    color: #000000; /* Set text color to black for contrast against the background */
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Search bar in the center */
+.search-bar {
+    flex-grow: 1; /* Make the search bar grow to fill space */
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Right-side menu with icons */
+.menu-right {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-right .icon {
+    font-size: 24px; /* Font Awesome icon size */
+    color: #000000; /* White icons to match the background */
+    cursor: pointer;
+}
+
+/* Hover effect for icons */
+.menu-right .icon:hover {
+    color: #ccc; /* Slight hover effect */
+}
+
+/* Styling for the product slider */
+.product-slider-container {
+    position: relative;
+    max-width: 85%; /* Set the slider to occupy 85% of the viewport width */
+    margin: 50px auto; /* Add space on top with margin-top (50px) */
+    overflow: hidden; /* Hide the overflow to enable sliding */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1; /* Stack above the background */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes the full width of the container */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Adjust the image size */
+.slide img {
+    width: 100%;  /* Let the image take 100% of the slide's width */
+    height: 450px; /* Set a uniform height */
+    object-fit: cover; /* Ensure the image fits the container without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description h3 {
+    font-size: 24px;
+}
+
+.description p {
+    font-size: 16px;
+}
+
+/* Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Boxes Section */
+.boxes-section {
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    margin: 30px auto;
+    width: 80%;
+    z-index: 1; /* Stack above the background */
+}
+
+/* Uniform Box Styling */
+.box {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 30%; /* Set each box to occupy 30% of the section */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background for the boxes */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-right: 20px; /* Space to the right of each box */
+}
+
+/* Remove margin for the last box */
+.box:last-child {
+    margin-right: 0; /* Remove margin from the last box */
+}
+
+/* Image in the box */
+.box img {
+    width: 100%; /* Set a fixed width for uniformity */
+    height: 150px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+}
+
+.box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+/* Content section */
+.content {
+    position: relative; /* Position relative to allow stacking of content */
+    z-index: 1; /* Ensure it appears above the background */
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(56, 119, 1, 0.9);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.icons .fab,
+.icons .fas {
+    color: #000;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .search-bar input[type="text"] {
+        width: 80%; /* Make the search bar responsive */
+    }
+    
+    .boxes-section {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        gap: 20px;
+        width: 90%; /* Adjust the width */
+    }
+
+    .box {
+        width: 100%; /* Make each box take the full width */
+    }
+}
