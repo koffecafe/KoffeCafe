@@ -3,97 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoffeCafe</title>
-    <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Header Responsivenss</title>
     <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- BoxIcons -->
+    <link rel="stylesheet"  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">   
+        <!--Remix Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">    
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background"></div> <!-- Fixed background image -->
-    <div class="content"> <!-- Content wrapper -->
-        <header>
-            <nav>
-                <div class="menu-left">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div class="menu-right">
-                    <a href="#"><i class="fas fa-shopping-cart icon"></i></a>
-                    <a href="#"><i class="fas fa-user icon"></i></a>
-                </div>
-            </nav>
-        </header>
+    <!-- Header -->
+     <header>
+        <a href="#" class="logo">
+            <img src="images/koffe.png" alt="Logo">
+        </a>
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
 
-        <!-- Slider Section -->
-        <div class="product-slider-container">
-            <div class="slider">
-                <!-- Placeholder for products; replace with actual product images and details -->
-                <div class="slide">
-                    <img src="images/pr1.jpg" alt="Product 1">
-                    <div class="description">
-                        <h3>Apple Juice</h3>
-                        <p>Sweet and Savory</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/pr2.jpg" alt="Product 2">
-                    <div class="description">
-                        <h3>Blended CheeseCakes</h3>
-                        <p>Delicious and Affordable</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/pr3.jpg" alt="Product 3">
-                    <div class="description">
-                        <h3>Mango CheeseCake</h3>
-                        <p>Milky and Creamy</p>
-                    </div>
-                </div>
-                <!-- Add more slides as needed -->
-            </div>
-            <!-- Left and Right arrows -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="right-content">
+            <a href="#" class="nav-btn">Sign In</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
 
-        <!-- Boxes Section -->
-        <div class="boxes-section">
-            <!-- Placeholder boxes; replace with actual product images and details -->
-            <div class="box" onclick="location.href='#Product1';">
+     </header>
+
+    <!-- Hero -->
+     <section class="hero">
+        <div class="hero-text">
+            <h5>#Beverage that suits you taste!</h5>
+            <h1>Koffe Cafe</h1>
+            <p>Satisfy your sweet tooth with a
+                 deliciously velvety shake that’s as energizing as it is
+                  indulgent.</p>
+          <div class="main-hero">
+            <a href="#" class="btn">Order Now</a>
+            <a href="#" class="price">
+                ₱39.00 | <span>Affordable Price</span>
+            </a>
+          </div>        
+        </div>
+
+        
+        
+
+     </section>
+     <!-- Slider -->
+     <div class="product-slider-container">
+        <div class="slider">
+            <!-- Placeholder for products; replace with actual product images and details -->
+            <div class="slide">
                 <img src="images/pr1.jpg" alt="Product 1">
-                <h3>Apple Juice</h3>
+                <div class="description">
+                    <h3>Apple Juice</h3>
+                    <p>Sweet and Savory</p>
+                </div>
             </div>
-            <div class="box" onclick="location.href='#Product2';">
+            <div class="slide">
                 <img src="images/pr2.jpg" alt="Product 2">
-                <h3>Blended CheeseCakes</h3>
+                <div class="description">
+                    <h3>Blended CheeseCakes</h3>
+                    <p>Delicious and Affordable</p>
+                </div>
             </div>
-            <div class="box" onclick="location.href='#Product3';">
+            <div class="slide">
                 <img src="images/pr3.jpg" alt="Product 3">
-                <h3>Mango CheeseCake</h3>
+                <div class="description">
+                    <h3>Mango CheeseCake</h3>
+                    <p>Milky and Creamy</p>
+                </div>
             </div>
-            <!-- Add more boxes as needed -->
+            <!-- Add more slides as needed -->
         </div>
+        <!-- Left and Right arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <section class="footer">
+     <!-- Box Section -->
+     <div class="boxes-section">
+        <!-- Placeholder boxes; replace with actual product images and details -->
+        <div class="box" onclick="location.href='#Product1';">
+            <img src="images/pr1.jpg" alt="Product 1">
+            <h3>Apple Juice</h3>
+        </div>
+        <div class="box" onclick="location.href='#Product2';">
+            <img src="images/pr2.jpg" alt="Product 2">
+            <h3>Blended CheeseCake2</h3>
+        </div>
+        <div class="box" onclick="location.href='#Product3';">
+            <img src="images/pr3.jpg" alt="Product 3">
+            <h3>Mango CheeseCake</h3>
+        </div>
+        <!-- Add more boxes as needed -->
+    </div>
+</div>
+
+        <div class="icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-messenger-line"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+        </div>
+
+        <div class="scroll">
+            <a href="#">
+                <i class="ri-scroll-to-bottom-line"></i>
+                Scroll Down
+            </a>
+        </div>
+
+        <!-- Footer -->
+         <section class="footer">
         <a href="webpage_about.html"><h2>Koffe Cafe</h2></a>
         <p>At KoffeCafe, we’re passionate about delicious, delightful beverages, and more.
              Join us as we build a community of beverage enthusiasts who share a love for refreshing and flavorful drinks!</p>
-        <div class="icons">
+        <div class="icon">
             <a href="#"><i class="fab fa-facebook"></i></a>|
             <a href="#"><i class="fas fa-envelope"></i></a>|
             <a href="#"><i class="fab fa-instagram"></i></a>|
             <a href="#"><i class="fab fa-twitter"></i></a> 
         </div>
     </section>
-
-    <script src="script.js"></script>
-</body> 
+    <!-- JavaScript -->
+   <script src="script.js"></script>  
+</body>
 </html>
