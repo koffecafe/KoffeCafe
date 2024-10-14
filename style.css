@@ -149,7 +149,6 @@ section {
 }
 
 .btn:hover {
-    transform: scale(1.1);
     background-color: #1abc9c; 
     color: #000000;
     border: #c9a17e;
