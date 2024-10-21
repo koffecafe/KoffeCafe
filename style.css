@@ -184,7 +184,7 @@ section {
 }
 
 .icons i:hover {
-    transform: translateY(-5px);
+    transform: translateX(5px);
     color: var(--main-color);
 }
 
