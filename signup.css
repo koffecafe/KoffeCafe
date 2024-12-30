@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --bg-color: #000000;
+    --text-color: #5C4033;
+    --main-color: #c9a17e;
+    --accent-color: #f7e7d3;
+    --base-color: white;
+    --input-color: #f3f0ff;
+}
+
+html {
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    color: var(--accent-color);
+}
+
+.wrapper {
+    position: relative;
+    border-right: 1px solid var(--accent-color);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(13px);
+}
+
+.home {
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    left: 20px; /* Adjust this value as needed */
+    font-size: 2.8rem; /* Adjust size of the home icon */
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+
+.home:hover {
+    transform: translateY(-5px);
+    color: var(--text-color);
+}
+
+
+.form-container {
+    position: absolute;
+    width: min(400px, 100%);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 500ms ease;
+    border: 3px solid var(--accent-color);
+}
+
+/* Initial positions for forms */
+#signup-form {
+    transform: translateX(0); /* Signup form is initially visible */
+    opacity: 1;
+}
+
+#signin-form {
+    transform: translateX(-100%); /* Signin form starts off-screen to the left */
+    opacity: 0;
+} 
+
+.arrow {
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    left: 20px; /* Adjust this value as needed */
+    font-size: 2.5rem; /* Adjust size of the arrow icon */
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+
+.arrow:hover {
+    transform: translateY(-5px);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    fill: var(--base-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-bottom: 2.5px solid #f7e7d3;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    transition: 150ms ease;
+    color: #f7e7d3;
+    font-size: 1.1em;
+}
+
+form input:hover {
+    border-color: var(--text-color);
+    background-color: transparent;
+}
+
+form input[type="text"] {
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+}
+
+form input:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+div:has(input:focus) > label {
+    background-color: none;
+
+}
+
+form input::placeholder {
+    color: var(--accent-color);
+
+}
+
+form button {
+    margin-top: 10px;
+    padding: 0.85em 4em;
+    border: none;
+    border-radius: 1000px;
+    background-color: var(--main-color);
+    color: var(--base-color);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);        
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#signup-error-message, #login-error-message {
+    color: #c3ff00;
+    display: inline-flex; /* This allows it to occupy space without affecting layout */
+    height: 20px; /* Set a fixed height, adjust as necessary */
+    text-align: center;
+    flex-direction: inherit;
+}
+
+#success-message {
+    color: #04ff00;
+    display: inline-block; /* This allows it to occupy space without affecting layout */
+    height: 20px; /* Set a fixed height, adjust as necessary */
+    margin-bottom: 5px;
+    padding-top: 7px;
+}
+
+/* Active class to swap forms */
+.show-signin #signup-form {
+    transform: translateX(-100%); /* Slide signup form out to the right */
+    opacity: 0;
+}
+
+.show-signin #signin-form {
+    transform: translateX(0); /* Slide signin form in from the left */
+    opacity: 1;
+}
+
+.show-signup #signin-form {
+    transform: translateX(-100%); /* Slide signin form out to the right */
+    opacity: 0;
+}
+
+.show-signup #signup-form {
+    transform: translateX(0); /* Slide signup form in from the left */
+    opacity: 1;
+}
+
+form div.incorrect label {
+    color: #ff001e;
+}
+
+form div.incorrect input {
+    border-color: #ff001e;
+}
+
+.incorrect input::placeholder {
+    color: #ff0000; /* Red color for the placeholder */
+}
+
+
+@media (max-width: 1100px){
+
+    .wrapper {
+        width: min(600px, 100%);
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 601px){
+
+    .wrapper {
+        width: min(600px, 100%);
+        border-radius: 0;
+        border-right: none;
+    }
+}
+
+@media (max-width: 420px){
+    .form-container {
+        border: none;
+    }
+}

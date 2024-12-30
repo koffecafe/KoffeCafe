@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koffe | Products</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cafebg.png" alt="Logo">
+        </div>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#home.html/shopContainer">Featured</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#aboutpage">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="right-content">
+            <button id="view-cart-btn">
+                <i class="bx bx-cart"></i> View Cart
+            </button>
+            <a href="#index.html">Logout</a>
+            <i class="bx bx-menu" id="menu-toggle"></i>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" id="sidebar-close">&times;</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#shopContainer">Featured</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#aboutpage">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="shop container" id="shopContainer">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/product1.jpg" alt="Product 1" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Apple Juice</h2>
+                    <span class="price">&#8369;100.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(1, 'Apple Juice', 100, 'images/product1.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/product2.jpg" alt="Product 2" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Mango Shake</h2>
+                    <span class="price">&#8369;150.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(2, 'Mango Shake', 150, 'images/product2.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/product3.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Blended Cheese Cake</h2>
+                    <span class="price">&#8369;69.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(3, 'Blended Cheese Cake', 69, 'images/product3.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/images (1).jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Caramel MilkTea</h2>
+                    <span class="price">&#8369;115.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(4, 'Caramel MilkTea', 115, 'images/images (1).jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/images (2).jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Boba MilkTea</h2>
+                    <span class="price">&#8369;96.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(5, 'Boba MilkTea', 96, 'images/images (2).jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/images (4).jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Belgian Chocolate</h2>
+                    <span class="price">&#8369;135.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(6, 'Belgian Chocolate', 135, 'images/images (4).jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/images.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ice Coffee</h2>
+                    <span class="price">&#8369;70.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(7, 'Ice Coffee', 70, 'images/images.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+             <div class="product-box">
+                <div class="product-image">
+                    <img src="images/Hijo-Superfoods-Green-Tea-Boba.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Green Tea Boba</h2>
+                    <span class="price">&#8369;85.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(8, 'Macha', 85, 'images/Hijo-Superfoods-Green-Tea-Boba.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/Gyeran-Bap-6.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rice & Topsilog</h2>
+                    <span class="price">&#8369;49.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(9, 'Rice & Topsilog', 49, 'images/Gyeran-Bap-6.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/Longganisa_with_rice.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Longaniza with Rice</h2>
+                    <span class="price">&#8369;75.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(10, 'MinceSpam Fried Rice', 75, 'images/Longganisa_with_rice.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="images/dominican.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Dominican Frice Rice</h2>
+                    <span class="price">&#8369;83.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(11, 'Dominican Frice Rice', 83, 'images/dominican.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+
+             <div class="product-box">
+                <div class="product-image">
+                    <img src="images/skhnn6b5f2b51.jpg" alt="Product 3" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Locrio de Longaniza</h2>
+                    <span class="price">&#8369;120.00</span>
+                </div>
+                <button class="add-cart-btn" onclick="addToCart(12, 'Locrio de Longaniza', 120, 'images/skhnn6b5f2b51.jpg')">
+                    <i class='bx bx-shopping-bag'></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal cart-modal">
+        <div class="modal-content">
+            <span id="close-cart-modal" class="close-btn">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="order-summary"></div>
+
+            <div class="modal-footer">
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="showCheckoutModal()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal checkout-modal">
+        <div class="modal-content">
+            <span id="close-checkout-modal" class="close-btn">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="recipientName">Recipient Name:</label>
+                <input type="text" id="recipientName" required>
+
+                <label for="deliveryAddress">Delivery Address:</label>
+                <textarea id="deliveryAddress" rows="4" required></textarea>
+
+                <div class="payment-options">
+                    <h3>Payment Method</h3>
+                    <label><input type="radio" name="payment-method" value="walkin" checked> Walk In</label>
+                    <label><input type="radio" name="payment-method" value="gcash"> GCash</label>
+                    <label><input type="radio" name="payment-method" value="cod"> Cash on Delivery</label>
+                </div>
+
+                <div class="total-summary">
+                    <p>Total Price: &#8369;<span id="total-price">0.00</span></p>
+                    <p>Delivery Fee: &#8369;<span id="delivery-fee">50.00</span></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" onclick="cancelCheckout()">Cancel</button>
+                    <button type="submit">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer_about">
+            <h4>About us</h4>
+            <p>Satisfy your sweet tooth with a deliciously velvety shake that’s as energizing as it is indulgent.</p>
+            <p>&copy; 2024 Koffe Cafe. All rights reserved.</p>
+        </div>
+
+        <div class="footer_contact">
+            <h4>Contact us</h4>
+            <p>Stay updated to our latest Trends</p>
+            <div class="contact_input">
+                <input type="email" placeholder="Enter email address">
+                <div class="submit">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_links">
+            <h4>Social Links</h4>
+            <p>Visit our social pages</p>
+            <div class="social_links">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-messenger'></i>
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bx-envelope'></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+
+</html>

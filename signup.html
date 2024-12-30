@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koffe</title>
+    <link rel="stylesheet" href="signup.css">
+    <script type="text/javascript" src="signup..js" defer></script>
+    <script type="text/javascript" src="validation.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="home">
+            <a href="index.html"><i class='bx bx-home'></i></a>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-form">
+            <h1>Signup</h1>
+            <p id="success-message"></p>
+            <p id="signup-error-message"></p>
+            <form id="form">
+                <div>
+                    <label for="name-input"><i class="fas fa-user"></i></label>
+                    <input type="text" name="name" autocomplete="off" id="name-input" placeholder="Firstname">
+                </div>
+                <div>
+                    <label for="lastname-input"><i class="fas fa-user"></i></label>
+                    <input type="text" name="lastname" autocomplete="off" id="lastname-input" placeholder="Lastname">
+                </div>
+                <div>
+                    <label for="email-input"><i class="fas fa-envelope"></i></label>
+                    <input type="email" name="email" autocomplete="off" id="email-input" placeholder="Email">
+                </div>
+                <div>
+                    <label for="password-input"><i class="fas fa-lock"></i></label>
+                    <input type="password" name="password" autocomplete="new-password" id="password-input" placeholder="Password">
+                </div>
+                <div>
+                    <label for="repeat-password-input"><i class="fas fa-lock"></i></label>
+                    <input type="password" name="repeat-password" autocomplete="new-password" id="repeat-password-input" placeholder="Confirm Password">
+                </div>
+                <button type="submit">Signup</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showSignin()">Login</a></p>
+            <div class="arrow">
+                <a href="#" onclick="showSignin()"><i class='bx bxs-right-arrow-circle'></i></a>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container" id="signin-form">
+            <h1>Login</h1>
+            <p id="login-error-message"></p>
+            <form id="login-form">
+                <div>
+                    <label for="login-email-input"><i class="fas fa-envelope"></i></label>
+                    <input type="email" name="email" autocomplete="off" id="login-email-input" placeholder="Email">
+                </div>
+                <div>
+                    <label for="login-password-input"><i class="fas fa-lock"></i></label>
+                    <input type="password" name="password" autocomplete="new-password" id="login-password-input" placeholder="Password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>New here? <a href="#" onclick="showSignup()">Signup</a></p>
+            <div class="arrow">
+                <a href="#" onclick="showSignup()"><i class='bx bxs-left-arrow-circle'></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
