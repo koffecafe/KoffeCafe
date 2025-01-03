@@ -44,7 +44,7 @@ header .navlist {
 
 header .navlist li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: 500;
     font-size: 1.1rem;
 }
@@ -151,7 +151,7 @@ header .right-content i {
 .shop .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 10px;
     justify-items: center;
 }
 
@@ -171,10 +171,13 @@ header .right-content i {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
+.product-image {
+    height: 70%;
+}
 .product-image img {
-    width: 100%;
-    height: auto;
+    margin-top: 1rem;
+    width: 70%;
+    max-height: 70%;
     border-radius: 10px;
 }
 
